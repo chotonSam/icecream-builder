@@ -1,0 +1,62 @@
+/* common  */
+body {
+  background: #f3f3f3;
+}
+* {
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 14px;
+}
+input,
+textarea {
+  border: 1px solid #dddfe2;
+  outline: none;
+}
+input:focus,
+textarea:focus {
+  box-shadow: 0px 0px 4px #b0cfe0;
+}
+a {
+  color: #385898;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0px auto;
+  border-bottom: 1px solid #5250507e;
+}

@@ -1,0 +1,9 @@
+.brandLogo img,
+.reactLogo img {
+  height: 60px;
+}
+
+.reactLogo {
+  display: flex;
+  align-items: center;
+}
