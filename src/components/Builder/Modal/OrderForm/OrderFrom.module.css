@@ -1,0 +1,50 @@
+/* order from  */
+.formcontainer {
+  padding: 1rem 3rem;
+  background: white;
+}
+.form_box {
+  background-color: #e9ebee;
+  padding: 35px;
+  margin: 20px 0;
+}
+
+.alignLeft {
+  width: 49%;
+  float: left;
+  padding: 7px;
+  margin-bottom: 15px;
+}
+.alignRight {
+  width: 49%;
+  float: right;
+  padding: 7px;
+  margin-bottom: 15px;
+}
+.email {
+  margin-bottom: 14px;
+  width: 100%;
+  padding: 7px;
+}
+.textarea {
+  width: 100%;
+  height: 95px;
+  margin: 9px auto;
+  padding: 7px;
+}
+.subBtn {
+  margin: 40px 0px 5px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .alignLeft,
+  .alignRight {
+    width: 100%;
+  }
+  .form_box {
+    padding: 10px;
+  }
+  .formcontainer {
+    padding: 5px 15px;
+  }
+}

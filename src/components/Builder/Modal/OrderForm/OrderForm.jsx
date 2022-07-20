@@ -1,19 +1,44 @@
-import React from 'react'
+import React from "react";
+import classes from "./OrderFrom.module.css";
 
 const OrderForm = () => {
   return (
-    <div class="formcontainer">
-    <h3>Complete the form below and hit submit</h3>
-    <form class="form_box" action="">
-      <ul>
-       
-        <li><input value={null} class="email" type="email" placeholder="Email"></li>
-        
-      </ul>
+    <div className={classes.formcontainer}>
+      <h3>Complete the form below and hit submit</h3>
+      <form className={classes.form_box} action="">
+        <ul>
+          <li>
+            <input
+              type="text"
+              className={classes.alignLeft}
+              placeholder="Name"
+            />{" "}
+            <input
+              type="number"
+              className={classes.alignRight}
+              placeholder="Phone no"
+            />
+          </li>
+          <li>
+            <input className={classes.email} type="email" placeholder="Email" />
+          </li>
+          <li>
+            <textarea
+              className={classes.textarea}
+              placeholder="Address"
+            ></textarea>
+          </li>
+          <li>
+            <input
+              type="submit"
+              className={`add_btn ${classes.subBtn}`}
+              value="Submit Order"
+            />
+          </li>
+        </ul>
+      </form>
+    </div>
+  );
+};
 
-    </form>
-  </div>
-  )
-}
-
-export default OrderForm
+export default OrderForm;

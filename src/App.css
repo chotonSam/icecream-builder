@@ -25,6 +25,15 @@ button {
   border: none;
   border-radius: 3px;
 }
+.add_btn {
+  width: 100%;
+  background: #28a745;
+  padding: 10px 0;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+}
 
 ul {
   list-style: none;

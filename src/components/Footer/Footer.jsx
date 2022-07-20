@@ -3,8 +3,8 @@ import classes from "../Footer/Footer.module.css";
 
 function Footer() {
   return (
-    <footer className={classes.footer}>
-      <div className={`${classes.container} flex`}>
+    <footer >
+      <div className={`container ${classes.container} flex`}>
         <div>Copyright ©2020.</div>
         <div>
           Build with 💝 by{" "}
