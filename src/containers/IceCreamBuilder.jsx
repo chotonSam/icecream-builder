@@ -1,6 +1,6 @@
 import React from 'react'
-import Builder from '../components/Body/Builder/Builder'
-import IceCream from '../components/Body/IceCream/IceCream'
+import Builder from '../components/Builder/Builder'
+import IceCream from '../components/IceCream/IceCream'
 
 const IceCreamBuilder = () => {
   return (

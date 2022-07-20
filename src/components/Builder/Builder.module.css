@@ -1,0 +1,20 @@
+.builder {
+  border: 1px solid #dddfe2;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.builder h3 {
+  margin-bottom: 40px;
+}
+
+.add_btn {
+  width: 100%;
+  background: #28a745;
+  padding: 10px 0;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+}

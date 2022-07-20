@@ -61,7 +61,7 @@
 .cherry {
   width: 50px;
   height: 77px;
-  background: url(img/cherry.png) center/cover no-repeat;
+  background: url(../../assets/images/cherry.png) center/cover no-repeat;
   margin-bottom: -10px;
   z-index: 1;
 }

@@ -1,0 +1,18 @@
+.flavor {
+  padding: 0;
+}
+
+.plus {
+  background-color: #28a745;
+}
+
+.minus {
+  background-color: red;
+}
+
+.plus,
+.minus {
+  width: 30px;
+  color: white;
+  margin-left: 10px;
+}
