@@ -1,0 +1,42 @@
+.lemon,
+.lemon::after {
+  background-color: #74d175;
+}
+
+.vanilla,
+.vanilla::after {
+  background-color: #ffe6b4;
+}
+
+.orange,
+.orange::after {
+  background: #ff8c00;
+}
+
+.chocolate,
+.chocolate::after {
+  background-color: #4b270c;
+}
+
+.strawberry,
+.strawberry::after {
+  background: #dd626b;
+}
+
+.scoop {
+  width: 100px;
+  height: 80px;
+  border-radius: 100%;
+  position: relative;
+  margin-bottom: -45px;
+}
+
+.scoop::after {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 120px;
+  left: -10px;
+  bottom: 10px;
+  border-radius: 100%;
+}

@@ -7,7 +7,7 @@ export default class IceCreamBuilder extends Component {
     items: {
       vanilla: 45,
       chocolate: 58,
-      lemom: 35,
+      lemon: 35,
       orange: 40,
       strawberry: 68,
     },
@@ -15,12 +15,40 @@ export default class IceCreamBuilder extends Component {
     totalPrice: 0,
   };
 
+  addScoop = (scoop) => {
+    const { scoops, items } = this.state;
+    const workingScoops = [...scoops];
+    workingScoops.push(scoop);
+
+    this.setState((prevState) => {
+      return {
+        scoops: workingScoops,
+        totalPrice: prevState.totalPrice + items[scoop],
+      };
+    });
+  };
+
+  removeScoops = (scoop) => {
+    const { scoops, items } = this.state;
+    const workingScoops = [...scoops];
+    const scoopIndex = workingScoops.findIndex((sc) => sc === scoop);
+
+    workingScoops.slice(scoopIndex, 1);
+
+    this.setState((prevState) => {
+      return {
+        scoops: workingScoops,
+        totalPrice: prevState.totalPrice - items[scoop],
+      };
+    });
+  };
+
   render() {
     const { items } = this.state;
     return (
-      <div class="container grid">
+      <div className="container grid">
         <IceCream items={items} />
-        <Builder />
+        <Builder items={items} />
       </div>
     );
   }

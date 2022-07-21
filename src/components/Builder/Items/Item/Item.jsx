@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "./Item.module.css";
 
-const Item = () => {
+const Item = ({ name }) => {
   return (
     <li className="flex">
       <div className={classes.flavor}>
-        <span>Vanilla</span>
-        <span>2</span>
+        <span>{name.charAt(0).toUpperCase() + name.slice(1)}</span>
+        <span className={classes.quantity}>2</span>
       </div>
 
       <div>
