@@ -1,3 +1,24 @@
+.scoop {
+  width: 100px;
+  height: 80px;
+  border-radius: 100%;
+  position: relative;
+  margin-bottom: -45px;
+}
+
+.scoop::after {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 120px;
+  left: -10px;
+  bottom: 10px;
+  border-radius: 100%;
+}
+div.Scoop_scoop__GOarm:first-of-type {
+  margin-bottom: 0px;
+}
+
 .lemon,
 .lemon::after {
   background-color: #74d175;
@@ -21,22 +42,4 @@
 .strawberry,
 .strawberry::after {
   background: #dd626b;
-}
-
-.scoop {
-  width: 100px;
-  height: 80px;
-  border-radius: 100%;
-  position: relative;
-  margin-bottom: -45px;
-}
-
-.scoop::after {
-  content: "";
-  position: absolute;
-  height: 35px;
-  width: 120px;
-  left: -10px;
-  bottom: 10px;
-  border-radius: 100%;
 }

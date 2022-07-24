@@ -4,16 +4,22 @@ import IceCream from "../components/IceCream/IceCream";
 
 export default class IceCreamBuilder extends Component {
   state = {
-    items: {
-      vanilla: 45,
-      chocolate: 58,
-      lemon: 35,
-      orange: 40,
-      strawberry: 68,
-    },
+    items: {},
     scoops: [],
     totalPrice: 0,
   };
+
+  componentDidMount() {
+    fetch(
+      "https://ice-cream-c7d80-default-rtdb.asia-southeast1.firebasedatabase.app/items.json"
+    )
+      .then((response) => response.json())
+      .then((responeData) => {
+        this.setState({
+          items: responeData,
+        });
+      });
+  }
 
   addScoop = (scoop) => {
     const { scoops, items } = this.state;
@@ -31,6 +37,7 @@ export default class IceCreamBuilder extends Component {
   removeScoops = (scoop) => {
     const { scoops, items } = this.state;
     const workingScoops = [...scoops];
+
     const scoopIndex = workingScoops.findIndex((sc) => sc === scoop);
 
     workingScoops.slice(scoopIndex, 1);
@@ -44,11 +51,17 @@ export default class IceCreamBuilder extends Component {
   };
 
   render() {
-    const { items } = this.state;
+    const { items, totalPrice, scoops } = this.state;
     return (
       <div className="container grid">
-        <IceCream items={items} />
-        <Builder items={items} />
+        <IceCream scoops={scoops} />
+        <Builder
+          items={items}
+          price={totalPrice}
+          add={this.addScoop}
+          remove={this.removeScoops}
+          scoops={scoops}
+        />
       </div>
     );
   }
