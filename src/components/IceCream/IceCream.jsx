@@ -6,7 +6,7 @@ const IceCream = ({ scoops }) => {
   // const flavors = Object.keys(scoops);
   return (
     <div className={classes.ice_cream}>
-      <div className={classes.cone}></div>
+      <p className={classes.cone}></p>
 
       {scoops.map((flover) => (
         <Scoop key={`${flover}${Math.random()}`} scoop={flover} />

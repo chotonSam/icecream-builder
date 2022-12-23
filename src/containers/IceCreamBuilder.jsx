@@ -4,22 +4,25 @@ import IceCream from "../components/IceCream/IceCream";
 
 export default class IceCreamBuilder extends Component {
   state = {
-    items: {},
+    items: {
+      chocolate: 48,
+      lemon: 56,
+      orange: 50,
+      strawberry: 52,
+      vanilla: 45,
+    },
     scoops: [],
     totalPrice: 0,
   };
 
-  componentDidMount() {
-    fetch(
-      "https://ice-cream-c7d80-default-rtdb.asia-southeast1.firebasedatabase.app/items.json"
-    )
-      .then((response) => response.json())
-      .then((responeData) => {
-        this.setState({
-          items: responeData,
-        });
-      });
-  }
+  clearState = () => {
+    this.setState(() => {
+      return {
+        scoops: [],
+        totalPrice: 0,
+      };
+    });
+  };
 
   addScoop = (scoop) => {
     const { scoops, items } = this.state;
@@ -40,7 +43,7 @@ export default class IceCreamBuilder extends Component {
 
     const scoopIndex = workingScoops.findIndex((sc) => sc === scoop);
 
-    workingScoops.slice(scoopIndex, 1);
+    workingScoops.splice(scoopIndex, 1);
 
     this.setState((prevState) => {
       return {
@@ -61,6 +64,7 @@ export default class IceCreamBuilder extends Component {
           add={this.addScoop}
           remove={this.removeScoops}
           scoops={scoops}
+          clearState={this.clearState}
         />
       </div>
     );

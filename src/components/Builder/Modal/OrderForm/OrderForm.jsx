@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "./OrderFrom.module.css";
 
-const OrderForm = () => {
+const OrderForm = ({ setPopup, clearState }) => {
+
+
   return (
     <div className={classes.formcontainer}>
       <h3>Complete the form below and hit submit</h3>
@@ -30,6 +32,10 @@ const OrderForm = () => {
           </li>
           <li>
             <input
+              onClick={() => {
+                setPopup(false);
+                clearState()
+              }}
               type="submit"
               className={`add_btn ${classes.subBtn}`}
               value="Submit Order"
